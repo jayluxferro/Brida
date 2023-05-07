@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>Brida</name>
-  <url>http://maven.apache.org</url>
+  <url>https://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,9 +21,7 @@
 		<plugin>
 			<artifactId>maven-assembly-plugin</artifactId>
 			
-			<configuration>  
-			              
-				<minimizeJar>true</minimizeJar>
+			<configuration>
 	           
 				<descriptorRefs>
 					<descriptorRef>jar-with-dependencies</descriptorRef>
@@ -34,9 +32,7 @@
 						<addClasspath>true</addClasspath>
 					</manifest>
 				</archive>
-				
-				<source>1.8</source>
-	        	<target>1.8</target>
+
 				
 			</configuration>        
                 
@@ -69,7 +65,7 @@
 	<dependency>
 		<groupId>net.portswigger.burp.extender</groupId>
 		<artifactId>burp-extender-api</artifactId>
-		<version>1.7.22</version>
+		<version>2.3</version>
 	</dependency>
 	
 	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
@@ -90,7 +86,7 @@
 	<dependency>
 	    <groupId>org.json</groupId>
 	    <artifactId>json</artifactId>
-	    <version>20171018</version>
+	    <version>20220320</version>
 	</dependency>
     
     <!-- https://mvnrepository.com/artifact/net.razorvine/pyrolite -->
@@ -111,8 +107,8 @@
 	<dependency>
 	    <groupId>com.fifesoft</groupId>
 	    <artifactId>rsyntaxtextarea</artifactId>
-	    <version>2.6.1.edited</version>
+	    <version>3.3.3</version>
 	</dependency>
-	    
+
   </dependencies>
 </project>

@@ -14,6 +14,7 @@ iv = b"jvHJ1XFt0IXBrxxx"
 
 app = flask.Flask(__name__)
 
+
 @app.route('/', methods=['GET', 'POST'])
 def handle_request():
     cipher = AES.new(key, AES.MODE_CBC, iv)
@@ -28,5 +29,6 @@ def handle_request():
         encoded = base64.urlsafe_b64encode(ciphere.encrypt(pad(plain, AES.block_size)))
     print(encoded)
     return encoded
+
 
 app.run(host="0.0.0.0", port=5000, debug=True)
