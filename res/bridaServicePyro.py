@@ -97,7 +97,7 @@ class BridaServicePyro:
 
     def callexportfunction(self, methodName, args):
         method_to_call = getattr(self.script.exports_sync, methodName)
-        print(f"Method: {methodName} => Args: {args}")
+        # print(f"Method: {methodName} => Args: {args}")
         # Take the Java list passed as argument and create a new variable list of argument
         # (necessary for bridge Python - Java, I think)
         s = []
@@ -109,7 +109,7 @@ class BridaServicePyro:
             print(s)
 
         return_value = method_to_call(*s)
-        print(f'Method call: {method_to_call} => Args: {args} => RetVal: {return_value}')
+        # print(f'Method call: {method_to_call} => Args: {args} => RetVal: {return_value}')
         return return_value
 
     @Pyro4.oneway
